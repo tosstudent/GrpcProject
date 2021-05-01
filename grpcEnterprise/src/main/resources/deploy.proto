@@ -1,0 +1,25 @@
+
+syntax = "proto3";
+
+package tosproject;
+
+//Declare java package
+option java_multiple_files = true;
+
+option java_package = "com.tosproject.grpcenterprise";
+
+option java_outer_classname = "grpcEnterpriseServiceImpl";
+
+//Define Mobile Ambulance Delpoyment – client stream 
+service DeployService{
+rpc LongDeploy (stream LongDeployRequest) returns (LongDeployResponse){};	
+		
+}
+
+message LongDeployRequest{
+	string message = 1;
+}
+
+message LongDeployResponse{
+	string result = 1;
+}

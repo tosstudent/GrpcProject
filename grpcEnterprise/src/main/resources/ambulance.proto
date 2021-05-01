@@ -1,0 +1,35 @@
+
+syntax = "proto3";
+
+
+
+//Declare java package
+option java_multiple_files = true;
+
+option java_package = "com.tosproject.grpcenterprise";
+
+option java_outer_classname = "grpcEnterpriseServiceImpl";
+//Define Emergency Request Service - Unary
+
+service AmbulanceService{
+	rpc ambulance(AmbulanceRequest) returns (ConfirmResponse) {};	
+	rpc address(AddressRequest) returns (AddressResponse) {};
+	
+}
+
+message AmbulanceRequest{
+	string ambulancequestion = 1;		
+}
+
+message ConfirmResponse{
+	string confirmambulance = 1;
+}
+
+message AddressRequest{
+	string addressquestion = 1;
+}
+
+message AddressResponse {
+	string addressconfirm = 1;
+	
+}

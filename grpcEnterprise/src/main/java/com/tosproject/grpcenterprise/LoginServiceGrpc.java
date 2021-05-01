@@ -1,4 +1,4 @@
-package ie.tosproject.grpcproject;
+package com.tosproject.grpcenterprise;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -17,44 +17,44 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- *Define Service - Unary
+ *Define Member Service Login - Unary
  * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.15.0)",
-    comments = "Source: grpcproject.proto")
-public final class EmergencyServiceGrpc {
+    comments = "Source: login.proto")
+public final class LoginServiceGrpc {
 
-  private EmergencyServiceGrpc() {}
+  private LoginServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "tosproject.EmergencyService";
+  public static final String SERVICE_NAME = "tosproject.LoginService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<ie.tosproject.grpcproject.LoginRequest,
-      ie.tosproject.grpcproject.LoginResponse> getLoginMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tosproject.grpcenterprise.LoginRequest,
+      com.tosproject.grpcenterprise.LoginResponse> getLoginMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "login",
-      requestType = ie.tosproject.grpcproject.LoginRequest.class,
-      responseType = ie.tosproject.grpcproject.LoginResponse.class,
+      requestType = com.tosproject.grpcenterprise.LoginRequest.class,
+      responseType = com.tosproject.grpcenterprise.LoginResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<ie.tosproject.grpcproject.LoginRequest,
-      ie.tosproject.grpcproject.LoginResponse> getLoginMethod() {
-    io.grpc.MethodDescriptor<ie.tosproject.grpcproject.LoginRequest, ie.tosproject.grpcproject.LoginResponse> getLoginMethod;
-    if ((getLoginMethod = EmergencyServiceGrpc.getLoginMethod) == null) {
-      synchronized (EmergencyServiceGrpc.class) {
-        if ((getLoginMethod = EmergencyServiceGrpc.getLoginMethod) == null) {
-          EmergencyServiceGrpc.getLoginMethod = getLoginMethod = 
-              io.grpc.MethodDescriptor.<ie.tosproject.grpcproject.LoginRequest, ie.tosproject.grpcproject.LoginResponse>newBuilder()
+  public static io.grpc.MethodDescriptor<com.tosproject.grpcenterprise.LoginRequest,
+      com.tosproject.grpcenterprise.LoginResponse> getLoginMethod() {
+    io.grpc.MethodDescriptor<com.tosproject.grpcenterprise.LoginRequest, com.tosproject.grpcenterprise.LoginResponse> getLoginMethod;
+    if ((getLoginMethod = LoginServiceGrpc.getLoginMethod) == null) {
+      synchronized (LoginServiceGrpc.class) {
+        if ((getLoginMethod = LoginServiceGrpc.getLoginMethod) == null) {
+          LoginServiceGrpc.getLoginMethod = getLoginMethod = 
+              io.grpc.MethodDescriptor.<com.tosproject.grpcenterprise.LoginRequest, com.tosproject.grpcenterprise.LoginResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "tosproject.EmergencyService", "login"))
+                  "tosproject.LoginService", "login"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ie.tosproject.grpcproject.LoginRequest.getDefaultInstance()))
+                  com.tosproject.grpcenterprise.LoginRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ie.tosproject.grpcproject.LoginResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new EmergencyServiceMethodDescriptorSupplier("login"))
+                  com.tosproject.grpcenterprise.LoginResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new LoginServiceMethodDescriptorSupplier("login"))
                   .build();
           }
         }
@@ -65,37 +65,37 @@ public final class EmergencyServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static EmergencyServiceStub newStub(io.grpc.Channel channel) {
-    return new EmergencyServiceStub(channel);
+  public static LoginServiceStub newStub(io.grpc.Channel channel) {
+    return new LoginServiceStub(channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static EmergencyServiceBlockingStub newBlockingStub(
+  public static LoginServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new EmergencyServiceBlockingStub(channel);
+    return new LoginServiceBlockingStub(channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static EmergencyServiceFutureStub newFutureStub(
+  public static LoginServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new EmergencyServiceFutureStub(channel);
+    return new LoginServiceFutureStub(channel);
   }
 
   /**
    * <pre>
-   *Define Service - Unary
+   *Define Member Service Login - Unary
    * </pre>
    */
-  public static abstract class EmergencyServiceImplBase implements io.grpc.BindableService {
+  public static abstract class LoginServiceImplBase implements io.grpc.BindableService {
 
     /**
      */
-    public void login(ie.tosproject.grpcproject.LoginRequest request,
-        io.grpc.stub.StreamObserver<ie.tosproject.grpcproject.LoginResponse> responseObserver) {
+    public void login(com.tosproject.grpcenterprise.LoginRequest request,
+        io.grpc.stub.StreamObserver<com.tosproject.grpcenterprise.LoginResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
     }
 
@@ -105,8 +105,8 @@ public final class EmergencyServiceGrpc {
             getLoginMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                ie.tosproject.grpcproject.LoginRequest,
-                ie.tosproject.grpcproject.LoginResponse>(
+                com.tosproject.grpcenterprise.LoginRequest,
+                com.tosproject.grpcenterprise.LoginResponse>(
                   this, METHODID_LOGIN)))
           .build();
     }
@@ -114,29 +114,29 @@ public final class EmergencyServiceGrpc {
 
   /**
    * <pre>
-   *Define Service - Unary
+   *Define Member Service Login - Unary
    * </pre>
    */
-  public static final class EmergencyServiceStub extends io.grpc.stub.AbstractStub<EmergencyServiceStub> {
-    private EmergencyServiceStub(io.grpc.Channel channel) {
+  public static final class LoginServiceStub extends io.grpc.stub.AbstractStub<LoginServiceStub> {
+    private LoginServiceStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private EmergencyServiceStub(io.grpc.Channel channel,
+    private LoginServiceStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected EmergencyServiceStub build(io.grpc.Channel channel,
+    protected LoginServiceStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new EmergencyServiceStub(channel, callOptions);
+      return new LoginServiceStub(channel, callOptions);
     }
 
     /**
      */
-    public void login(ie.tosproject.grpcproject.LoginRequest request,
-        io.grpc.stub.StreamObserver<ie.tosproject.grpcproject.LoginResponse> responseObserver) {
+    public void login(com.tosproject.grpcenterprise.LoginRequest request,
+        io.grpc.stub.StreamObserver<com.tosproject.grpcenterprise.LoginResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request, responseObserver);
     }
@@ -144,28 +144,28 @@ public final class EmergencyServiceGrpc {
 
   /**
    * <pre>
-   *Define Service - Unary
+   *Define Member Service Login - Unary
    * </pre>
    */
-  public static final class EmergencyServiceBlockingStub extends io.grpc.stub.AbstractStub<EmergencyServiceBlockingStub> {
-    private EmergencyServiceBlockingStub(io.grpc.Channel channel) {
+  public static final class LoginServiceBlockingStub extends io.grpc.stub.AbstractStub<LoginServiceBlockingStub> {
+    private LoginServiceBlockingStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private EmergencyServiceBlockingStub(io.grpc.Channel channel,
+    private LoginServiceBlockingStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected EmergencyServiceBlockingStub build(io.grpc.Channel channel,
+    protected LoginServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new EmergencyServiceBlockingStub(channel, callOptions);
+      return new LoginServiceBlockingStub(channel, callOptions);
     }
 
     /**
      */
-    public ie.tosproject.grpcproject.LoginResponse login(ie.tosproject.grpcproject.LoginRequest request) {
+    public com.tosproject.grpcenterprise.LoginResponse login(com.tosproject.grpcenterprise.LoginRequest request) {
       return blockingUnaryCall(
           getChannel(), getLoginMethod(), getCallOptions(), request);
     }
@@ -173,29 +173,29 @@ public final class EmergencyServiceGrpc {
 
   /**
    * <pre>
-   *Define Service - Unary
+   *Define Member Service Login - Unary
    * </pre>
    */
-  public static final class EmergencyServiceFutureStub extends io.grpc.stub.AbstractStub<EmergencyServiceFutureStub> {
-    private EmergencyServiceFutureStub(io.grpc.Channel channel) {
+  public static final class LoginServiceFutureStub extends io.grpc.stub.AbstractStub<LoginServiceFutureStub> {
+    private LoginServiceFutureStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private EmergencyServiceFutureStub(io.grpc.Channel channel,
+    private LoginServiceFutureStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected EmergencyServiceFutureStub build(io.grpc.Channel channel,
+    protected LoginServiceFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new EmergencyServiceFutureStub(channel, callOptions);
+      return new LoginServiceFutureStub(channel, callOptions);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ie.tosproject.grpcproject.LoginResponse> login(
-        ie.tosproject.grpcproject.LoginRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tosproject.grpcenterprise.LoginResponse> login(
+        com.tosproject.grpcenterprise.LoginRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request);
     }
@@ -208,10 +208,10 @@ public final class EmergencyServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final EmergencyServiceImplBase serviceImpl;
+    private final LoginServiceImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(EmergencyServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(LoginServiceImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -221,8 +221,8 @@ public final class EmergencyServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_LOGIN:
-          serviceImpl.login((ie.tosproject.grpcproject.LoginRequest) request,
-              (io.grpc.stub.StreamObserver<ie.tosproject.grpcproject.LoginResponse>) responseObserver);
+          serviceImpl.login((com.tosproject.grpcenterprise.LoginRequest) request,
+              (io.grpc.stub.StreamObserver<com.tosproject.grpcenterprise.LoginResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -240,32 +240,32 @@ public final class EmergencyServiceGrpc {
     }
   }
 
-  private static abstract class EmergencyServiceBaseDescriptorSupplier
+  private static abstract class LoginServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    EmergencyServiceBaseDescriptorSupplier() {}
+    LoginServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return ie.tosproject.grpcproject.grpcProjectServiceImpl.getDescriptor();
+      return com.tosproject.grpcenterprise.grpcEnterpriseServiceImpl.getDescriptor();
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("EmergencyService");
+      return getFileDescriptor().findServiceByName("LoginService");
     }
   }
 
-  private static final class EmergencyServiceFileDescriptorSupplier
-      extends EmergencyServiceBaseDescriptorSupplier {
-    EmergencyServiceFileDescriptorSupplier() {}
+  private static final class LoginServiceFileDescriptorSupplier
+      extends LoginServiceBaseDescriptorSupplier {
+    LoginServiceFileDescriptorSupplier() {}
   }
 
-  private static final class EmergencyServiceMethodDescriptorSupplier
-      extends EmergencyServiceBaseDescriptorSupplier
+  private static final class LoginServiceMethodDescriptorSupplier
+      extends LoginServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    EmergencyServiceMethodDescriptorSupplier(String methodName) {
+    LoginServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -280,11 +280,11 @@ public final class EmergencyServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (EmergencyServiceGrpc.class) {
+      synchronized (LoginServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new EmergencyServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new LoginServiceFileDescriptorSupplier())
               .addMethod(getLoginMethod())
               .build();
         }
