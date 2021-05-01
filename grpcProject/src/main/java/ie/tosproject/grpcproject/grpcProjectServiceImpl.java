@@ -14,6 +14,16 @@ public final class grpcProjectServiceImpl {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tosproject_LoginRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tosproject_LoginRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tosproject_LoginResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tosproject_LoginResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -23,9 +33,14 @@ public final class grpcProjectServiceImpl {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021grpcproject.proto\022\ntosprojectB5\n\031ie.to" +
-      "sproject.grpcprojectB\026grpcProjectService" +
-      "ImplP\001b\006proto3"
+      "\n\021grpcproject.proto\022\ntosproject\"M\n\014Login" +
+      "Request\022\021\n\tfirstname\030\001 \001(\t\022\020\n\010lastname\030\002" +
+      " \001(\t\022\030\n\020membershipNumber\030\003 \001(\005\" \n\rLoginR" +
+      "esponse\022\017\n\007message\030\001 \001(\t2R\n\020EmergencySer" +
+      "vice\022>\n\005login\022\030.tosproject.LoginRequest\032" +
+      "\031.tosproject.LoginResponse\"\000B5\n\031ie.tospr" +
+      "oject.grpcprojectB\026grpcProjectServiceImp" +
+      "lP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -39,6 +54,18 @@ public final class grpcProjectServiceImpl {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_tosproject_LoginRequest_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_tosproject_LoginRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tosproject_LoginRequest_descriptor,
+        new java.lang.String[] { "Firstname", "Lastname", "MembershipNumber", });
+    internal_static_tosproject_LoginResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_tosproject_LoginResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tosproject_LoginResponse_descriptor,
+        new java.lang.String[] { "Message", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
