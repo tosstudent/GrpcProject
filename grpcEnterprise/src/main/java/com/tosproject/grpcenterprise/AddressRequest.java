@@ -70,13 +70,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tosproject.grpcenterprise.grpcEnterpriseServiceImpl.internal_static_AddressRequest_descriptor;
+    return com.tosproject.grpcenterprise.Ambulance.internal_static_AddressRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tosproject.grpcenterprise.grpcEnterpriseServiceImpl.internal_static_AddressRequest_fieldAccessorTable
+    return com.tosproject.grpcenterprise.Ambulance.internal_static_AddressRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tosproject.grpcenterprise.AddressRequest.class, com.tosproject.grpcenterprise.AddressRequest.Builder.class);
   }
@@ -279,13 +279,13 @@ private static final long serialVersionUID = 0L;
       com.tosproject.grpcenterprise.AddressRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tosproject.grpcenterprise.grpcEnterpriseServiceImpl.internal_static_AddressRequest_descriptor;
+      return com.tosproject.grpcenterprise.Ambulance.internal_static_AddressRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tosproject.grpcenterprise.grpcEnterpriseServiceImpl.internal_static_AddressRequest_fieldAccessorTable
+      return com.tosproject.grpcenterprise.Ambulance.internal_static_AddressRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.tosproject.grpcenterprise.AddressRequest.class, com.tosproject.grpcenterprise.AddressRequest.Builder.class);
     }
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tosproject.grpcenterprise.grpcEnterpriseServiceImpl.internal_static_AddressRequest_descriptor;
+      return com.tosproject.grpcenterprise.Ambulance.internal_static_AddressRequest_descriptor;
     }
 
     @java.lang.Override

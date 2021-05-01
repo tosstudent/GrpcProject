@@ -8,7 +8,6 @@ option java_multiple_files = true;
 
 option java_package = "com.tosproject.grpcenterprise";
 
-option java_outer_classname = "grpcEnterpriseServiceImpl";
 //Define Emergency Request Service - Unary
 
 service AmbulanceService{

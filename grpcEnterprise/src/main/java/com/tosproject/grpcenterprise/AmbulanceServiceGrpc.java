@@ -305,7 +305,7 @@ public final class AmbulanceServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.tosproject.grpcenterprise.grpcEnterpriseServiceImpl.getDescriptor();
+      return com.tosproject.grpcenterprise.Ambulance.getDescriptor();
     }
 
     @java.lang.Override
