@@ -536,6 +536,10 @@ private static final long serialVersionUID = 0L;
   public com.tosproject.grpcenterprise.AddressResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+public char[] getmessage() {
+	// TODO Auto-generated method stub
+	return null;
+}
 
 }
 

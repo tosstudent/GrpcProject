@@ -24,21 +24,26 @@ public class AmbulanceServer extends AmbulanceServiceImplBase{
 	@Override
 	public void ambulance(AmbulanceRequest request, StreamObserver<ConfirmResponse> responseObserver) {
 
-		String ambulancequestion = request.getAmbulancequestion();
-		System.out.println("Please confirm you need an ambulance");
+		String ambulancerequest = request.getAmbulancequestion();
 		
-		ConfirmResponse.Builder response = ConfirmResponse.newBuilder();
-		response.setConfirmambulance("I need an ambulance");
+		
+		String response = request.getAmbulancequestion();
+		String confirmambulance = "Please confirm you need an ambulance";
+		ConfirmResponse result = ConfirmResponse.newBuilder()
+			.setConfirmambulance(confirmambulance)
+			.build();	
 	}
 
 	@Override
 	public void address(AddressRequest request, StreamObserver<AddressResponse> responseObserver) {
-		String addressquestion = request.getAddressquestion();
-		ConfirmResponse.Builder response =  ConfirmResponse.newBuilder();
-		response.setAdressconfirm("My address is Newlands Cross, Dublin 15");
+		String addressrequest = request.getAddressquestion();
+		String addressconfirm = ("I need an ambulance");
+		AddressResponse response =  AddressResponse.newBuilder()
+				.setAddressconfirm(addressconfirm)
+				.build();
 		
-		
-		responseObserver.onNext(response.build());
+	
+		responseObserver.onNext(response);
 		//complete the RPC call
 		responseObserver.onCompleted();
 

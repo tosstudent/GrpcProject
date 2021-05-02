@@ -3,6 +3,8 @@
 
 package com.tosproject.grpcenterprise;
 
+import com.google.protobuf.Message;
+
 /**
  * Protobuf type {@code ConfirmResponse}
  */
@@ -325,20 +327,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public AddressResponse build() {
-      com.tosproject.grpcenterprise.ConfirmResponse result = buildPartial();
+    public ConfirmResponse build() {
+      ConfirmResponse result = (ConfirmResponse) buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    @java.lang.Override
-    public com.tosproject.grpcenterprise.ConfirmResponse buildPartial() {
-      com.tosproject.grpcenterprise.ConfirmResponse result = new com.tosproject.grpcenterprise.ConfirmResponse(this);
+    public AddressResponse buildPartial(AddressResponse AddressResponse) {
+      ConfirmResponse result = new com.tosproject.grpcenterprise.ConfirmResponse(this);
       result.confirmambulance_ = confirmambulance_;
       onBuilt();
-      return result;
+      return AddressResponse;
     }
 
     @java.lang.Override
@@ -501,6 +502,12 @@ private static final long serialVersionUID = 0L;
 	public void setAdressconfirm(String string) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public Message buildPartial() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
