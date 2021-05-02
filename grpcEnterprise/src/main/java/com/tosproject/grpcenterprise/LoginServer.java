@@ -12,6 +12,7 @@ public class LoginServer extends LoginServiceImplBase{
 	
 	//server port
 		public static void main(String[] args) throws IOException, InterruptedException {
+			
 		Server server = ServerBuilder.forPort(48051).addService(new LoginServer()).build();
 		server.start();
 		System.out.println("Server started at " + server.getPort());
@@ -26,8 +27,11 @@ public class LoginServer extends LoginServiceImplBase{
 		
 		
 		String firstname = request.getFirstname();
+		@SuppressWarnings("unused")
 		String lastname = request.getLastname();
+		@SuppressWarnings("unused")
 		int membershipNumber =request.getMembershipNumber();
+		//create response
 		String message = "Welcome"  +  firstname + "Your membership is valid, welcome to Cornelius Emergency Service ";
 		LoginResponse.Builder response = LoginResponse.newBuilder();
 		response.setMessage(message);

@@ -325,7 +325,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tosproject.grpcenterprise.ConfirmResponse build() {
+    public AddressResponse build() {
       com.tosproject.grpcenterprise.ConfirmResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
@@ -497,6 +497,11 @@ private static final long serialVersionUID = 0L;
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
+
+	public void setAdressconfirm(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 
 
     // @@protoc_insertion_point(builder_scope:ConfirmResponse)

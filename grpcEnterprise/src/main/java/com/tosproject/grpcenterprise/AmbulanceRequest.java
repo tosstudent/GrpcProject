@@ -536,6 +536,10 @@ private static final long serialVersionUID = 0L;
   public com.tosproject.grpcenterprise.AmbulanceRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
+public String getAddressquestion() {
+	// TODO Auto-generated method stub
+	return null;
+}
 
 }
 
