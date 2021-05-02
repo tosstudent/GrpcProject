@@ -8,11 +8,11 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
-public class loginServer extends LoginServiceImplBase{
+public class LoginServer extends LoginServiceImplBase{
 	
 	//server port
 		public static void main(String[] args) throws IOException, InterruptedException {
-		Server server = ServerBuilder.forPort(48051).addService(new loginServer()).build();
+		Server server = ServerBuilder.forPort(48051).addService(new LoginServer()).build();
 		server.start();
 		System.out.println("Server started at " + server.getPort());
 		server.awaitTermination();
@@ -20,27 +20,21 @@ public class loginServer extends LoginServiceImplBase{
 	 
 	
 	//service implementation
-	@SuppressWarnings("unused")
+	
 	@Override
 	public void login(LoginRequest request, StreamObserver<LoginResponse> responseObserver) {
 		
 		
-		System.out.println("Loign here");
 		String firstname = request.getFirstname();
 		String lastname = request.getLastname();
 		int membershipNumber =request.getMembershipNumber();
+		String message = "Welcome"  +  firstname + "Your membership is valid, welcome to Cornelius Emergency Service ";
 		LoginResponse.Builder response = LoginResponse.newBuilder();
+		response.setMessage(message);
 		
-		if(membershipNumber <= (899887798)) {
-			//return valid member message
-			response.setMessage(lastname).setMessage("Your membership is valid, welccome to Cornelius Emergency Service ");
-		}
-		else {
-			
-			//return invalid member message
-			response.setMessage(lastname).setMessage("invalid Member");
-		}
+		//send the RPC response
 		responseObserver.onNext(response.build());
+		//complete the RPC call
 		responseObserver.onCompleted();
 	}
 }
