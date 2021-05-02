@@ -15,10 +15,6 @@ import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-import io.grpc.CallOptions;
-import io.grpc.Channel;
-import io.grpc.MethodDescriptor;
-
 /**
  */
 @javax.annotation.Generated(
@@ -211,41 +207,17 @@ public final class AmbulanceServiceGrpc {
 
     /**
      */
-    public com.tosproject.grpcenterprise.ConfirmResponse ambulance(String string) {
+    public com.tosproject.grpcenterprise.ConfirmResponse ambulance(com.tosproject.grpcenterprise.AmbulanceRequest request) {
       return blockingUnaryCall(
-          getChannel(), getAmbulanceMethod(), getCallOptions(), string);
+          getChannel(), getAmbulanceMethod(), getCallOptions(), request);
     }
 
-    private ConfirmResponse blockingUnaryCall(Channel channel,
-			MethodDescriptor<AmbulanceRequest,ConfirmResponse> methodDescriptor, CallOptions callOptions,
-			String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	/**
+    /**
      */
     public com.tosproject.grpcenterprise.AddressResponse address(com.tosproject.grpcenterprise.AddressRequest request) {
       return blockingUnaryCall(
           getChannel(), getAddressMethod(), getCallOptions(), request);
     }
-
-	private AddressResponse blockingUnaryCall(Channel channel,
-			MethodDescriptor<AddressRequest, AddressResponse> addressMethod, CallOptions callOptions,
-			AddressRequest request) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public AddressResponse address(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ConfirmResponse ambulance(AmbulanceRequest ambulancerequest) {
-		// TODO Auto-generated method stub
-		return null;
-	}
   }
 
   /**

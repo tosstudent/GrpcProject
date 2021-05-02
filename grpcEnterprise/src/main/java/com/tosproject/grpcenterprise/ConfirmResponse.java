@@ -3,8 +3,6 @@
 
 package com.tosproject.grpcenterprise;
 
-import com.google.protobuf.Message;
-
 /**
  * Protobuf type {@code ConfirmResponse}
  */
@@ -327,19 +325,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ConfirmResponse build() {
-      ConfirmResponse result = (ConfirmResponse) buildPartial();
+    public com.tosproject.grpcenterprise.ConfirmResponse build() {
+      com.tosproject.grpcenterprise.ConfirmResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public AddressResponse buildPartial(AddressResponse AddressResponse) {
-      ConfirmResponse result = new com.tosproject.grpcenterprise.ConfirmResponse(this);
+    @java.lang.Override
+    public com.tosproject.grpcenterprise.ConfirmResponse buildPartial() {
+      com.tosproject.grpcenterprise.ConfirmResponse result = new com.tosproject.grpcenterprise.ConfirmResponse(this);
       result.confirmambulance_ = confirmambulance_;
       onBuilt();
-      return AddressResponse;
+      return result;
     }
 
     @java.lang.Override
@@ -498,17 +497,6 @@ private static final long serialVersionUID = 0L;
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
-
-	public void setAdressconfirm(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Message buildPartial() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 
     // @@protoc_insertion_point(builder_scope:ConfirmResponse)
